@@ -1,3 +1,13 @@
+ï»¿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace GraphInterface
 {
     public partial class Form1 : Form
@@ -17,7 +27,7 @@ namespace GraphInterface
             textBox1.Text += ")";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonBackSpace_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Length > 0)
             {
@@ -28,13 +38,13 @@ namespace GraphInterface
                 //notifyIcon1.Text = "Nohing to remove";
                 //notifyIcon1.BalloonTipText = "Nohing to remove";
                 //notifyIcon1.Icon = SystemIcons.Information;
-                //// Â³äîáðàæåííÿ ïîâ³äîìëåííÿ
+                //// Ð’Ñ–Ð´Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð½Ñ Ð¿Ð¾Ð²Ñ–Ð´Ð¾Ð¼Ð»ÐµÐ½Ð½Ñ
                 //notifyIcon1.ShowBalloonTip(1000);
                 MessageBox.Show("Nohing to remove");
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonC_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Length > 0)
             {
@@ -46,12 +56,12 @@ namespace GraphInterface
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
             textBox1.Text += "1";
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             textBox1.Text += "2";
         }
@@ -106,7 +116,7 @@ namespace GraphInterface
             textBox1.Text += "-";
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void button20_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
@@ -121,17 +131,17 @@ namespace GraphInterface
             }
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void button19_Click(object sender, EventArgs e)
         {
             textBox1.Text += "0";
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void button18_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void button17_Click(object sender, EventArgs e)
         {
             textBox1.Text += "+";
         }
