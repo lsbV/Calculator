@@ -30,6 +30,7 @@ namespace AnalaizerClass
         }
         public static double Mod(double a, double b)
         {
+            
             if (b == 0)
             {
                 throw new Exception("Divide by zero");
