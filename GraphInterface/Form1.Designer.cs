@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
@@ -55,10 +56,11 @@
             button18 = new Button();
             button19 = new Button();
             button20 = new Button();
-            button21 = new Button();
-            button22 = new Button();
-            button23 = new Button();
+            buttonMR = new Button();
+            buttonMplus = new Button();
+            buttonMC = new Button();
             button24 = new Button();
+            notifyIcon1 = new NotifyIcon(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -132,6 +134,7 @@
             button4.TabIndex = 4;
             button4.Text = "C";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -144,6 +147,7 @@
             button3.TabIndex = 3;
             button3.Text = "BackSpace";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -156,6 +160,7 @@
             button2.TabIndex = 2;
             button2.Text = ")";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -168,6 +173,7 @@
             button1.TabIndex = 1;
             button1.Text = "(";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label3
             // 
@@ -190,6 +196,7 @@
             button5.TabIndex = 5;
             button5.Text = "1";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -202,6 +209,7 @@
             button6.TabIndex = 6;
             button6.Text = "2";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -214,6 +222,7 @@
             button7.TabIndex = 7;
             button7.Text = "3";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -226,6 +235,7 @@
             button8.TabIndex = 8;
             button8.Text = "/";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -238,6 +248,7 @@
             button9.TabIndex = 9;
             button9.Text = "4";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
@@ -250,6 +261,7 @@
             button10.TabIndex = 10;
             button10.Text = "5";
             button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
             // 
             // button11
             // 
@@ -262,6 +274,7 @@
             button11.TabIndex = 11;
             button11.Text = "6";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // button12
             // 
@@ -274,6 +287,7 @@
             button12.TabIndex = 12;
             button12.Text = "*";
             button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click;
             // 
             // button13
             // 
@@ -286,6 +300,7 @@
             button13.TabIndex = 13;
             button13.Text = "7";
             button13.UseVisualStyleBackColor = false;
+            button13.Click += button13_Click;
             // 
             // button14
             // 
@@ -298,6 +313,7 @@
             button14.TabIndex = 14;
             button14.Text = "8";
             button14.UseVisualStyleBackColor = false;
+            button14.Click += button14_Click;
             // 
             // button15
             // 
@@ -310,6 +326,7 @@
             button15.TabIndex = 15;
             button15.Text = "9";
             button15.UseVisualStyleBackColor = false;
+            button15.Click += button15_Click;
             // 
             // button16
             // 
@@ -322,6 +339,7 @@
             button16.TabIndex = 16;
             button16.Text = "-";
             button16.UseVisualStyleBackColor = false;
+            button16.Click += button16_Click;
             // 
             // button17
             // 
@@ -334,6 +352,7 @@
             button17.TabIndex = 17;
             button17.Text = "+/-";
             button17.UseVisualStyleBackColor = false;
+            button17.Click += button17_Click;
             // 
             // button18
             // 
@@ -346,6 +365,7 @@
             button18.TabIndex = 18;
             button18.Text = "0";
             button18.UseVisualStyleBackColor = false;
+            button18.Click += button18_Click;
             // 
             // button19
             // 
@@ -358,6 +378,7 @@
             button19.TabIndex = 19;
             button19.Text = "mod";
             button19.UseVisualStyleBackColor = false;
+            button19.Click += button19_Click;
             // 
             // button20
             // 
@@ -370,42 +391,46 @@
             button20.TabIndex = 20;
             button20.Text = "+";
             button20.UseVisualStyleBackColor = false;
+            button20.Click += button20_Click;
             // 
-            // button21
+            // buttonMR
             // 
-            button21.BackColor = SystemColors.Info;
-            button21.FlatStyle = FlatStyle.Popup;
-            button21.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button21.Location = new Point(486, 318);
-            button21.Name = "button21";
-            button21.Size = new Size(71, 59);
-            button21.TabIndex = 21;
-            button21.Text = "MR";
-            button21.UseVisualStyleBackColor = false;
+            buttonMR.BackColor = SystemColors.Info;
+            buttonMR.FlatStyle = FlatStyle.Popup;
+            buttonMR.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonMR.Location = new Point(486, 318);
+            buttonMR.Name = "buttonMR";
+            buttonMR.Size = new Size(71, 59);
+            buttonMR.TabIndex = 21;
+            buttonMR.Text = "MR";
+            buttonMR.UseVisualStyleBackColor = false;
+            buttonMR.Click += buttonMR_Click;
             // 
-            // button22
+            // buttonMplus
             // 
-            button22.BackColor = SystemColors.Info;
-            button22.FlatStyle = FlatStyle.Popup;
-            button22.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button22.Location = new Point(486, 394);
-            button22.Name = "button22";
-            button22.Size = new Size(71, 59);
-            button22.TabIndex = 22;
-            button22.Text = "M+";
-            button22.UseVisualStyleBackColor = false;
+            buttonMplus.BackColor = SystemColors.Info;
+            buttonMplus.FlatStyle = FlatStyle.Popup;
+            buttonMplus.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonMplus.Location = new Point(486, 394);
+            buttonMplus.Name = "buttonMplus";
+            buttonMplus.Size = new Size(71, 59);
+            buttonMplus.TabIndex = 22;
+            buttonMplus.Text = "M+";
+            buttonMplus.UseVisualStyleBackColor = false;
+            buttonMplus.Click += buttonMplus_Click;
             // 
-            // button23
+            // buttonMC
             // 
-            button23.BackColor = SystemColors.Info;
-            button23.FlatStyle = FlatStyle.Popup;
-            button23.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button23.Location = new Point(486, 470);
-            button23.Name = "button23";
-            button23.Size = new Size(71, 59);
-            button23.TabIndex = 23;
-            button23.Text = "MC";
-            button23.UseVisualStyleBackColor = false;
+            buttonMC.BackColor = SystemColors.Info;
+            buttonMC.FlatStyle = FlatStyle.Popup;
+            buttonMC.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonMC.Location = new Point(486, 470);
+            buttonMC.Name = "buttonMC";
+            buttonMC.Size = new Size(71, 59);
+            buttonMC.TabIndex = 23;
+            buttonMC.Text = "MC";
+            buttonMC.UseVisualStyleBackColor = false;
+            buttonMC.Click += buttonMC_Click;
             // 
             // button24
             // 
@@ -418,6 +443,12 @@
             button24.TabIndex = 24;
             button24.Text = "=";
             button24.UseVisualStyleBackColor = false;
+            button24.Click += button24_Click;
+            // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
             // 
             // Form1
             // 
@@ -427,9 +458,9 @@
             BackColor = SystemColors.ScrollBar;
             ClientSize = new Size(612, 627);
             Controls.Add(button24);
-            Controls.Add(button23);
-            Controls.Add(button22);
-            Controls.Add(button21);
+            Controls.Add(buttonMC);
+            Controls.Add(buttonMplus);
+            Controls.Add(buttonMR);
             Controls.Add(label3);
             Controls.Add(button20);
             Controls.Add(button19);
@@ -450,6 +481,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculator";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -487,9 +519,10 @@
         private Button button18;
         private Button button19;
         private Button button20;
-        private Button button21;
-        private Button button22;
-        private Button button23;
+        private Button buttonMR;
+        private Button buttonMplus;
+        private Button buttonMC;
         private Button button24;
+        private NotifyIcon notifyIcon1;
     }
 }

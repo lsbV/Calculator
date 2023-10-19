@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnalaizerClass
 {
-    internal class CalcClass
+    public class CalcClass
     {
         public static double Add(double a, double b)
         {
