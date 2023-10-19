@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalaizerClass", "AnalaizerClass\AnalaizerClass.csproj", "{23E03526-09BF-42DC-B15E-9B632B07203F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnalaizerClass", "AnalaizerClass\AnalaizerClass.csproj", "{23E03526-09BF-42DC-B15E-9B632B07203F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphInterface", "GraphInterface\GraphInterface.csproj", "{9A2641C1-3899-4197-A832-F143A7519DE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{23E03526-09BF-42DC-B15E-9B632B07203F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23E03526-09BF-42DC-B15E-9B632B07203F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23E03526-09BF-42DC-B15E-9B632B07203F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A2641C1-3899-4197-A832-F143A7519DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A2641C1-3899-4197-A832-F143A7519DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A2641C1-3899-4197-A832-F143A7519DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A2641C1-3899-4197-A832-F143A7519DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
