@@ -34,7 +34,7 @@ namespace AnalaizerClass
 
             if (b == 0)
             {
-                throw new Exception("Divide by zero");
+                throw new Exception(MathError.Error09);
             }
             return a % b;
 
