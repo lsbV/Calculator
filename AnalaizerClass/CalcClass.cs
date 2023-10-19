@@ -10,14 +10,26 @@ namespace AnalaizerClass
     {
         public static double Add(double a, double b)
         {
+            if (a+b.ToString().Length > 65536)
+            {
+                throw new Exception(MathError.Error07);
+            }
             return a + b;
         }
         public static double Substruct(double a, double b)
         {
+            if (a - b.ToString().Length > 65536)
+            {
+                throw new Exception(MathError.Error07);
+            }
             return a - b;
         }
         public static double Multiplication(double a, double b)
         {
+            if (a * b.ToString().Length > 65536)
+            {
+                throw new Exception(MathError.Error07);
+            }
             return (a * b);
         }
         public static double Divide(double a, double b)
@@ -26,6 +38,10 @@ namespace AnalaizerClass
             if (b == 0)
             {
                 throw new Exception(MathError.Error09);
+            }
+            if (a / b.ToString().Length > 65536)
+            {
+                throw new Exception(MathError.Error07);
             }
             return (a / b);
         }
@@ -36,11 +52,19 @@ namespace AnalaizerClass
             {
                 throw new Exception(MathError.Error09);
             }
+            if (a % b.ToString().Length > 65536)
+            {
+                throw new Exception(MathError.Error07);
+            }
             return a % b;
 
         }
         public static double ABS(double a)
         {
+            if (Math.Abs(a).ToString().Length > 65536)
+            {
+                throw new Exception(MathError.Error07);
+            }
             return Math.Abs(a);
         }
         public static int IABS(int a)
@@ -48,6 +72,10 @@ namespace AnalaizerClass
             if (a is double)
             {
                 throw new Exception("Wrong format");
+            }
+            if (Math.Abs(a).ToString().Length > 65536)
+            {
+                throw new Exception(MathError.Error07);
             }
             return Math.Abs((int)a);
         }
