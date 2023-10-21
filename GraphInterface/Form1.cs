@@ -1,3 +1,5 @@
+using AnalaizerClass;
+
 namespace GraphInterface
 {
     public partial class Form1 : Form
@@ -6,16 +8,13 @@ namespace GraphInterface
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text += "(";
-
         }
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text += ")";
-
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -43,62 +42,50 @@ namespace GraphInterface
         {
             textBox1.Text += "1";
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             textBox1.Text += "2";
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
             textBox1.Text += "3";
         }
-
         private void button8_Click(object sender, EventArgs e)
         {
             textBox1.Text += "/";
         }
-
         private void button9_Click(object sender, EventArgs e)
         {
             textBox1.Text += "4";
         }
-
         private void button10_Click(object sender, EventArgs e)
         {
             textBox1.Text += "5";
         }
-
         private void button11_Click(object sender, EventArgs e)
         {
             textBox1.Text += "6";
         }
-
         private void button12_Click(object sender, EventArgs e)
         {
             textBox1.Text += "*";
         }
-
         private void button13_Click(object sender, EventArgs e)
         {
             textBox1.Text += "7";
         }
-
         private void button14_Click(object sender, EventArgs e)
         {
             textBox1.Text += "8";
         }
-
         private void button15_Click(object sender, EventArgs e)
         {
             textBox1.Text += "9";
         }
-
         private void button16_Click(object sender, EventArgs e)
         {
             textBox1.Text += "-";
         }
-
         private void button17_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBox1.Text))
@@ -113,12 +100,10 @@ namespace GraphInterface
                 }
             }
         }
-
         private void button18_Click(object sender, EventArgs e)
         {
             textBox1.Text += "0";
         }
-
         private void button19_Click(object sender, EventArgs e)
         {
             string equation = textBox1.Text;
@@ -159,7 +144,6 @@ namespace GraphInterface
         {
             textBox1.Text += "+";
         }
-
         string equation = ""; // Ця змінна зберігатиме ціле рівняння
 
         private void buttonMR_Click(object sender, EventArgs e)
@@ -171,7 +155,6 @@ namespace GraphInterface
         private void buttonMplus_Click(object sender, EventArgs e)
         {
             equation += textBox1.Text;
-
             textBox1.Clear();
         }
 
@@ -182,7 +165,12 @@ namespace GraphInterface
 
         private void button24_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Analyzer analyzer = new Analyzer(textBox1.Text);
+                textBox2.Text = analyzer.Estimate().ToString();
+            }
+            catch (Exception) { }
         }
     }
 }
