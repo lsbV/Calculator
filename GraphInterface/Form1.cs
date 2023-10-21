@@ -1,13 +1,3 @@
-п»їusing System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 namespace GraphInterface
 {
     public partial class Form1 : Form
@@ -20,14 +10,14 @@ namespace GraphInterface
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text += "(";
-        }
 
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text += ")";
-        }
 
-        private void buttonBackSpace_Click(object sender, EventArgs e)
+        }
+        private void button3_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Length > 0)
             {
@@ -35,16 +25,10 @@ namespace GraphInterface
             }
             else
             {
-                //notifyIcon1.Text = "Nohing to remove";
-                //notifyIcon1.BalloonTipText = "Nohing to remove";
-                //notifyIcon1.Icon = SystemIcons.Information;
-                //// Р’С–РґРѕР±СЂР°Р¶РµРЅРЅСЏ РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ
-                //notifyIcon1.ShowBalloonTip(1000);
                 MessageBox.Show("Nohing to remove");
             }
         }
-
-        private void buttonC_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Length > 0)
             {
@@ -55,13 +39,12 @@ namespace GraphInterface
                 MessageBox.Show("Nohing to remove");
             }
         }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             textBox1.Text += "1";
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
             textBox1.Text += "2";
         }
@@ -116,7 +99,7 @@ namespace GraphInterface
             textBox1.Text += "-";
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void button17_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
@@ -131,34 +114,70 @@ namespace GraphInterface
             }
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void button18_Click(object sender, EventArgs e)
         {
             textBox1.Text += "0";
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void button19_Click(object sender, EventArgs e)
         {
+            string equation = textBox1.Text;
 
+            if (!string.IsNullOrEmpty(equation))
+            {
+                try
+                {
+                    double result = CalculateMod(equation);
+
+                    textBox2.Text = result.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Будь ласка, введіть рівняння для виконання операції 'mod'.");
+            }
         }
-
-        private void button17_Click(object sender, EventArgs e)
+        private double CalculateMod(string equation)
+        {
+            string[] parts = equation.Split('+');
+            if (parts.Length == 2)
+            {
+                double num1 = double.Parse(parts[0]);
+                double num2 = double.Parse(parts[1]);
+                return num1 % num2;
+            }
+            else
+            {
+                throw new ArgumentException("Неправильний формат рівняння. Повинно бути у форматі 'число + число'.");
+            }
+        }
+        private void button20_Click(object sender, EventArgs e)
         {
             textBox1.Text += "+";
         }
 
+        string equation = ""; // Ця змінна зберігатиме ціле рівняння
+
         private void buttonMR_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text += equation;
+            equation = "";
         }
 
         private void buttonMplus_Click(object sender, EventArgs e)
         {
+            equation += textBox1.Text;
 
+            textBox1.Clear();
         }
 
         private void buttonMC_Click(object sender, EventArgs e)
         {
-
+            equation = "";
         }
 
         private void button24_Click(object sender, EventArgs e)
