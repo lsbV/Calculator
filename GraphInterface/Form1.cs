@@ -90,13 +90,27 @@ namespace GraphInterface
         {
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
-                if (textBox1.Text[0] == '-')
+                string currentText = textBox1.Text;
+                if (char.IsDigit(currentText[currentText.Length - 1]))
                 {
-                    textBox1.Text = textBox1.Text.Substring(1);
-                }
-                else
-                {
-                    textBox1.Text = "-" + textBox1.Text;
+                    int lastIndex = currentText.LastIndexOfAny(new char[] { '+', '-' });
+
+                    if (lastIndex == -1)
+                    {
+                        textBox1.Text = "-" + currentText;
+                    }
+                    else
+                    {
+                        char lastChar = currentText[lastIndex];
+                        if (lastChar == '+')
+                        {
+                            textBox1.Text = currentText.Substring(0, lastIndex) + "-" + currentText.Substring(lastIndex + 1);
+                        }
+                        else if (lastChar == '-')
+                        {
+                            textBox1.Text = currentText.Substring(0, lastIndex) + "+" + currentText.Substring(lastIndex + 1);
+                        }
+                    }
                 }
             }
         }
