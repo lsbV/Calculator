@@ -170,7 +170,14 @@ namespace GraphInterface
                 Analyzer analyzer = new Analyzer(textBox1.Text);
                 textBox2.Text = analyzer.Estimate().ToString();
             }
-            catch (Exception) { }
+            catch (CalcException ex)
+            {
+                textBox2.Text = ex.Message;
+            }
+            catch(Exception ex2) 
+            {
+                MessageBox.Show(ex2.Message);
+            }
         }
     }
 }
