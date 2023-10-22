@@ -5,13 +5,9 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnalaizerClass", "AnalaizerClass\AnalaizerClass.csproj", "{23E03526-09BF-42DC-B15E-9B632B07203F}"
 EndProject
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcClass", "CalcClass\CalcClass.csproj", "{87F58EC0-29BB-4450-8B5B-E487ADDDA565}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphInterface", "GraphInterface\GraphInterface.csproj", "{9A2641C1-3899-4197-A832-F143A7519DE2}"
->>>>>>> GraphInterface
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcClass", "CalcClass\CalcClass.csproj", "{87F58EC0-29BB-4450-8B5B-E487ADDDA565}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphInterface", "GraphInterface\GraphInterface.csproj", "{8D8BE2AB-C01D-49E0-B5D4-B7632F319643}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphInterface", "GraphInterface\GraphInterface.csproj", "{9A2641C1-3899-4197-A832-F143A7519DE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,12 +23,10 @@ Global
 		{87F58EC0-29BB-4450-8B5B-E487ADDDA565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87F58EC0-29BB-4450-8B5B-E487ADDDA565}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87F58EC0-29BB-4450-8B5B-E487ADDDA565}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
 		{9A2641C1-3899-4197-A832-F143A7519DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A2641C1-3899-4197-A832-F143A7519DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A2641C1-3899-4197-A832-F143A7519DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A2641C1-3899-4197-A832-F143A7519DE2}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> GraphInterface
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
