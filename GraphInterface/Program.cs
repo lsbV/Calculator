@@ -13,5 +13,6 @@ namespace GraphInterface
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
+       
     }
 }
