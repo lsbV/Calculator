@@ -11,5 +11,11 @@ namespace AnalaizerClass
         public CalcException(string message) : base(message)
         {
         }
+        public int ErrorCode { get; private set; }
+
+        public CalcException(int errorCode)
+        {
+            ErrorCode = errorCode;
+        }
     }
 }
